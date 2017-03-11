@@ -9,26 +9,20 @@
 </head>
 <body>
   <section class="form-container">
-    <div class="container-fluid">
-      <form class="form-singup" action="index.html" method="post">
         <h2>Spec - Login de Usuario</h2>
-        <div class="name-container">
+        <div class="login-form">
           <label for="imputEmail" class="sr-only">Email:</label>
           <input type="texto" name="email" id="imput-email" placeholder="Ingrese su correo" autofocus="">
-          <div id="email-error">
-          </div>
-        </div>
+          <span id="email-error">
+          </span>
         <br>
-        <div class="name-container">
           <label for="imputPassword" class="sr-only">Password:</label>
           <input type="password" name="password" id="imput-password" placeholder="************" autofocus="">
-          <div id="password-error">
-          </div>
-        </div>
+          <span id="password-error">
+        </span>
+      </div>
         <br>
-        <button id ="login" class="btn btn-lg btn-primary btn-block submit-btn" type="submit">Login</button>
-      </form>
-    </div>
+      <button type="button" name="button">login</button>
   </section>
 <script src="assets/js/main.js" type="text/javascript">
 

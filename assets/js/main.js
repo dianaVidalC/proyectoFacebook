@@ -7,7 +7,7 @@ window.addEventListener('load',function() {
       var password= document.getElementById("imput-password");
       var valEmail=/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/;
 
-      if(email.value.length===0){
+      if(email.value==""){
         document.getElementById("email-error").innerHTML="El campo de usuario no puede estar en blanco";
         email.focus();
         return false;
@@ -28,5 +28,4 @@ window.addEventListener('load',function() {
         document.getElementById("password-error").innerHTML="";
       }
     });
-
  });
