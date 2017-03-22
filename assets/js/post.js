@@ -1,5 +1,6 @@
 window.addEventListener('load',function() {
 var publicar=document.getElementById("publicar");
+var Post=new Object();
 
 publicar.addEventListener("click",function(e){
   e.preventDefault();
@@ -12,7 +13,10 @@ publicar.addEventListener("click",function(e){
     return false;
   }else{
     document.getElementById("publicacion-vacia").innerHTML="";
-
+  }
+  if(publicacion.value!=""){
+    Post.mensaje=publicacion.value;
+    document.getElementById("post").innerHTML=publicacion.value;
   }
 
 });

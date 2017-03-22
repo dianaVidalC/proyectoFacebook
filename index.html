@@ -8,21 +8,23 @@
   <title>facebook</title>
 </head>
 <body>
-  <section class="form-container">
-        <h2>Spec - Login de Usuario</h2>
+  <h2>Spec - Login de Usuario</h2>
+  <section class="tabla-login">
         <div class="login-form">
-          <label for="imputEmail" class="sr-only">Email:</label>
+          <p for="imputEmail">Email:</p>
           <input type="texto" name="email" id="imput-email" placeholder="Ingrese su correo" autofocus="">
-          <span id="email-error">
+          <br>
+          <span class="error" id="email-error">
           </span>
         <br>
-          <label for="imputPassword" class="sr-only">Password:</label>
+          <p for="imputPassword">Password:</p>
           <input type="password" name="password" id="imput-password" placeholder="************" autofocus="">
-          <span id="password-error">
+          <br>
+          <span class="error" id="password-error">
         </span>
       </div>
         <br>
-      <button type="button" name="button">login</button>
+          <button class="boton" id="login" type="button" name="button">login</button>
   </section>
 <script src="assets/js/main.js" type="text/javascript">
 
