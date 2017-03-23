@@ -10,7 +10,7 @@ h1{
 .tabla-muro{
   width: 100px;
   border-collapse: collapse;
-  border: 1px gray solid;
+  border: 1px solid gray ;
   margin: 20px;
   padding: 20px;
   font-family: cursive;
@@ -28,27 +28,56 @@ h1{
   height: 100px;
 
 }
-.dropdown{
-  padding: 0px 9px;
-  font-size: 14px;
-}
 .error-publicacion{
   font-family: cursive;
   font-size: 14px;
   color: red;
   margin-left: 15px;
 }
+.dropdown{
+  font-size: 14px;
+  bottom: 5px;
+  margin-left:120px;
+}
 .publicar{
-  padding: 0px 9px;
   font-size: 14px;
   border-radius: 4px;
+  bottom: 5px;
+  margin-left: 10px;
 }
 .posteo{
-  border-collapse: collapse;
-  border: 1px gray solid;
-  margin: 20px;
-  padding: 20px;
-  width: 100px;
-  height: 100px;
+  position: relative;
+  border: 1px solid grey;
+  padding: 22px;
+  margin:22px;
+  display: block;
+  width: 350px;
+  height: 150px;
+  background: white;
   font-family: cursive;
-}
+  font-size: 19px;
+  }
+  .amigosFiltro{
+    font-size: 15px;
+    font-family: cursive;
+    margin-left: 40px;
+  }
+  .publicoFiltro{
+    font-size: 15px;
+    font-family: cursive;
+    margin-left: 10px;
+  }
+  .a1{
+    position: absolute;
+    font-size: 14px;
+    bottom: 5px;
+    left: 15px;
+
+  }
+  .a2{
+    position: absolute;
+    font-size: 14px;
+    bottom: 5px;
+    left: 75px;
+
+  }

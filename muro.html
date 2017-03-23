@@ -10,12 +10,11 @@
 <body>
   <h1>Spec Muro</h1>
   <section>
-    <form action="index.html" method="post">
-        <table class="tabla-muro">
+    <table class="tabla-muro">
           <tr>
             <td class="celda-muro">
-              <textarea class="texto-muro" name="publicacion" id ="texto" rows="10" cols="60" placeholder="¿Qué está pasando?"></textarea>
-              <select class="dropdown" name="menu">
+              <textarea class="texto-muro" name="publicacion" id ="texto" rows="10" cols="50" placeholder="¿Qué está pasando?"></textarea>
+              <select id="dropdown" class="dropdown" name="menu">
                 <option value="amigos">Amigos</option>
                 <option value="publico">Público</option>
               </select>
@@ -25,13 +24,12 @@
           <span class="error-publicacion" id="publicacion-vacia">
           </span>
       </table>
-      <a href="#">Amigos</a>
-      <a href="#">Público</a>
-      <table class="posteo" id="post"></table>
-    </form>
+      <a class="amigosFiltro" href="#">Amigos</a>
+      <a class="publicoFiltro" href="#">Público</a>
+      <div id="posteo"></post>
   </section>
 <script src="assets/js/post.js" type="text/javascript">
-
+<script src="assets/js/muro2.js" type="text/javascript">
 </script>
 </body>
 </html>
