@@ -1,11 +1,42 @@
 window.addEventListener('load',function() {
-var publicar=document.getElementById("publicar");
+  var publicar=document.getElementById("publicar");
 
   publicar.addEventListener("click",function(e){
     e.preventDefault();
     var publicacion= document.getElementById("texto");
-    var Post=new Object();
 
+    function Post(posteoAmigos,posteoPublico){
+      this.posteoAmigos=posteoAmigos;
+      this.posteoPublico=posteoPublico;
+      //this.postEliminar=eliminar();
+    }
+    var resultado = document.getElementById('posteo');
+
+    function crearPost(texto) {
+      var post = document.createElement('div');
+      var texto = document.createElement('p');
+      texto.innerHTML = texto;
+      var editar=document.createElement('a');
+      var eliminar = document.createElement('a');
+      post.classList.add("posteo");
+      editar.classList.add("a1");
+      eliminar.classList.add("a2");
+      editar.setAttribute("href","#");
+      eliminar.setAttribute("href","#");
+      editar.setAttribute("id","editar");
+      eliminar.setAttribute("id","eliminar");
+      eliminar.innerHTML = "Eliminar"
+      editar.innerHTML = "Editar"
+      eliminar.addEventListener('click',function(e) {
+        e.preventDefault();
+        var postParent = texto.target.parent; // Devuelve el padre
+        postParent.removeChild(texto);
+      });
+      post.appendChild(texto);
+      post.appendChild(eliminar);
+      post.appendChild(editar);
+      return post;
+    }
       if(publicacion.value===""){
         document.getElementById("publicacion-vacia").innerHTML="* debe publicar algo";
         publicacion.focus();
@@ -15,62 +46,21 @@ var publicar=document.getElementById("publicar");
         }
       if(publicacion.value!="" && document.getElementById("dropdown").value==="amigos"){
         Post.posteoAmigos=publicacion.value;
-        var contenido = document.getElementById("posteo");
-	       var divPost = document.createElement("div");
-         var a1Post=document.createElement("a");
-         var a2Post=document.createElement("a");
-         var editar=document.createTextNode("Editar")
-         var eliminar=document.createTextNode("Eliminar")
-	        divPost.classList.add("posteo");
-          a1Post.classList.add("a1");
-          a2Post.classList.add("a2");
-          a1Post.setAttribute("href","#");
-          a2Post.setAttribute("href","#");
-          a1Post.setAttribute("id","editar");
-          a2Post.setAttribute("id","eliminar");
-          divPost.innerHTML =Post.posteoAmigos;
-          a1Post.appendChild(editar);
-          a2Post.appendChild(eliminar);
-          divPost.appendChild(a1Post);
-          divPost.appendChild(a2Post);
-          contenido.appendChild(divPost);
+        resultado.appendChild(crearPost(Post.posteoAmigos));
 	       }else if (publicacion.value!="" && document.getElementById("dropdown").value==="publico") {
            Post.posteoPublico=publicacion.value;
-           var contenido = document.getElementById("posteo");
-           var divPost = document.createElement("div");
-           var a1Post=document.createElement("a");
-           var a2Post=document.createElement("a");
-           var editar=document.createTextNode("Editar")
-           var eliminar=document.createTextNode("Eliminar")
-           divPost.classList.add("posteo");
-           divPost.setAttribute("id","muro");
-           a1Post.classList.add("a1");
-           a2Post.classList.add("a2");
-           a1Post.setAttribute("href","#");
-           a2Post.setAttribute("href","#");
-           a1Post.setAttribute("id","editar");
-           a2Post.setAttribute("id","eliminar");
-           divPost.innerHTML =Post.posteoAmigos;
-           a1Post.appendChild(editar);
-           a2Post.appendChild(eliminar);
-           divPost.appendChild(a1Post);
-           divPost.appendChild(a2Post);
-           contenido.appendChild(divPost);
-
+           resultado.appendChild(crearPost(Post.posteoPublico));
 	        }
-      document.getElementById("texto").value="";
+    //  document.getElementById("texto").value="";
 
-
-        var eliminarPost=document.getElementsByClassName("a2");
-        for(var i=0;eliminarPost.length;i++){
-          eliminarPost[i].addEventListener("click",function(e){
-          e.preventDefault();
-            var eliminado=document.getElementsByClassName("posteo");
-              for(var j=0;eliminado.length;j++){
-                eliminado[j].parentNode.removeChild(eliminado[j]);
-          }
-
-        });
-      }
       });
     });
+
+
+    /*
+  Esto crea la siguiente estructura
+  <div>
+    <p>texto pasado a la funcion</p>
+    <a href="#">Eliminar</a>
+  </div>
+*/

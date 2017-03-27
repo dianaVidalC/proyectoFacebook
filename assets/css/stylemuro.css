@@ -1,31 +1,35 @@
 body{
   background-color: #D4E8F1;
   color:black;
+  font-family: helvetica,arial,sans-serif;
+  position: absolute;
 }
 h1{
-  font-family: cursive;
-  margin-left: 15px;
+
+  margin-left: 20px;
 
 }
 .tabla-muro{
-  width: 100px;
+  width: 350px;
+  height: 200px;
   border-collapse: collapse;
   border: 1px solid gray ;
   margin: 20px;
   padding: 20px;
-  font-family: cursive;
 }
 .celda-muro{
    width: 100px;
-   text-align: right;
+   height: 200px;
+   text-align: center;
    margin: 15px;
    padding: 15px;
  }
-}
+
 .texto-muro{
-  font-family: cursive;
   width: 300px;
-  height: 100px;
+  height: 180px;
+  font-size: 15px;
+  resize: none;
 
 }
 .error-publicacion{
@@ -49,22 +53,20 @@ h1{
   position: relative;
   border: 1px solid grey;
   padding: 22px;
-  margin:22px;
+  margin:35px;
   display: block;
-  width: 350px;
+  width: 280px;
   height: 150px;
   background: white;
-  font-family: cursive;
-  font-size: 19px;
+  font-size: 15px;
+  align-content:stretch;
   }
   .amigosFiltro{
-    font-size: 15px;
-    font-family: cursive;
+    font-size: 15px;;
     margin-left: 40px;
   }
   .publicoFiltro{
     font-size: 15px;
-    font-family: cursive;
     margin-left: 10px;
   }
   .a1{

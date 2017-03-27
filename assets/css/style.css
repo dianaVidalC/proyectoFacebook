@@ -1,15 +1,14 @@
 body{
   background-color: gray;
   color:black;
+  font-family: helvetica,arial,sans-serif;
 }
 h2{
   text-align: center;
-  font-family: cursive;
   margin-top: 100px;
 }
 .tabla-login{
   text-align: center;
-  font-family:cursive;
   background-color: blue;
   color: white;
   border:1px solid blue;
